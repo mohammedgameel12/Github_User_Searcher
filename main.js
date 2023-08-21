@@ -4,6 +4,7 @@ let reposContainer = document.querySelector(".repos");
 let btn = document.querySelector("#search_btn");
 
 btn.onclick = _ => {
+    reposContainer.innerHTML = ""
     userContainer.innerHTML = `
         <div class="loading"></div>
     `
@@ -32,6 +33,7 @@ btn.onclick = _ => {
                 fetch(`https://api.github.com/users/${githubUser.value}/repos`)
                 .then(response => response.json())
                 .then(repos => {
+                    reposContainer.innerHTML += `<h1>${data.public_repos} Repos</h1>` || "0"
                     repos.forEach(repo => {
                         reposContainer.innerHTML += `
                         <div class="repo">
