@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    outline: none;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 15px;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+body {
+    background-color: #f0f2ff;
+}
+.input_user {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.input_user input {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px 30px;
+    border: unset;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px #00000012;
+}
+.input_user button {
+    background-color: transparent;
+    cursor: pointer;
+    color: #2a2a2a;
+    border-radius: 50px;
+    padding: 12px 30px;
+    border: solid #2a2a2a 1px;
+    transition: 0.3s;
+}
+.input_user button:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: transparent;
+}
+.github_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    gap: 20px;
+}
+.github_user img {
+    width: 150px;
+    border: solid 1px #121212;
+    border-radius: 54% 46% 71% 29% / 23% 77% 23% 77%;
+}
+.github_user h1 {
+    color: #2a2a2a;
+    text-align: center;
+}
+.github_user h2 {
+    color: #2a2a2a;
+    text-transform: capitalize;
+    text-align: center;
+}
+.github_user p {
+    color: #747474;
+    font-size: 18px;
+    font-weight: 500;
+}
+.github_user div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.github_user div span {
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.github_user links {
+    display: flex;
+    gap: 20px;
+}
+.github_user a {
+    width: 35px;
+    height: 35px;
+    background-color: #2a2a2a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.github_user .loading {
+    width: 50px;
+    height: 50px;
+    border: solid 5px #2a2a2a;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation-name: spinn;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes spinn {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+.repos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.repo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: solid 1px #d4c6ff;
+    overflow: hidden;
+}
+.repo h1 {
+    color: #2a2a2a;
+}
+.repo a {
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+    color: #7a00ff;
+    font-weight: 500;
+}
+.repo a::before {
+    content: '';
+    position: absolute;
+    background-color: #d4c6ff94;
+    width: 30px;
+    height: 100px;
+    transform: rotate(45deg);
+    z-index: -1;
+    border-radius: 50px;
+    top: -15px;
+    left: -7px;
+}
+header {
+    text-align: center;
+    padding-bottom: 100px;
+}
+header  h1 {
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #2a2a2a;
+}
